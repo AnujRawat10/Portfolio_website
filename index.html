@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Galileo Design</title>
+    <title>Anuj Rawat</title>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
       rel="stylesheet"
@@ -33,11 +33,12 @@
   </head>
 
   <body class="bg-slate-50" style='font-family: Manrope, "Noto Sans", sans-serif;'>
-    <div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
-      <div class="layout-container flex h-full grow flex-col">
-        <header class="flex items-center justify-between border-b border-[#e7eef3] px-10 py-3" data-aos="fade-down">
+    <div class="relative flex flex-col min-h-screen overflow-x-hidden">
+      <div class="flex-grow flex flex-col">
+        <!-- Header -->
+        <header class="flex flex-col sm:flex-row items-center justify-between border-b border-[#e7eef3] px-4 sm:px-10 py-3 gap-3 sm:gap-0" data-aos="fade-down">
           <div class="flex items-center gap-4 text-[#0e151b]">
-            <div class="size-4">
+            <div class="w-6 h-6">
               <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_6_319)">
                   <path d="M8.578 8.578c-3.05 3.05-5.127 6.936-5.969 11.167-.841 4.23-.41 8.615 1.24 12.6 1.65 3.985 4.446 7.392 8.032 9.788C15.468 44.53 19.686 45.81 24 45.81c4.313 0 8.53-1.279 12.116-3.675 3.587-2.396 6.382-5.802 8.033-9.788 1.65-3.985 2.081-8.37 1.24-12.6-.842-4.231-2.919-8.117-5.969-11.167L24 24 8.578 8.578Z" fill="currentColor"/>
@@ -49,87 +50,85 @@
             </div>
             <h2 class="text-[#0e151b] text-lg font-bold tracking-[-0.015em]">Anuj Rawat</h2>
           </div>
-          <div class="flex flex-1 justify-end gap-8">
-            <div class="flex items-center gap-9">  
-              <a class="text-[#0e151b] text-sm font-medium" href="#portfolio">Portfolio</a>
-              <a class="text-[#0e151b] text-sm font-medium" href="#about">About</a>
-            </div>
+          <div class="flex justify-center sm:justify-end gap-6 flex-wrap">
+            <a class="text-[#0e151b] text-sm font-medium" href="#portfolio">Portfolio</a>
+            <a class="text-[#0e151b] text-sm font-medium" href="#about">About</a>
+          </div>
         </header>
 
-        <div class="px-40 flex flex-1 justify-center py-5" id="portfolio">
-          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div class="@container">
-              <div class="@[480px]:p-4" data-aos="fade-up">
-                <div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10" style='background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url("https://cdn.usegalileo.ai/sdxl10/4546df5e-9282-4923-86ad-a4a2678b3ebd.png");'>
-                  <div class="flex flex-col gap-2 text-left">
-                    <h1 class="text-white text-4xl font-black tracking-[-0.033em] @[480px]:text-5xl fade-in-up">
-                      Hi, I'm Anuj Rawat. I'm a Full Stack Developer.
-                    </h1>
-                    <h2 class="text-white text-sm @[480px]:text-base fade-in-up">
-                      I recently graduated from Sharda University Greater Noida. I'm passionate about designing and developing smart software that solves real-world problems.
-                    </h2>
+        <!-- Main Content -->
+        <main class="w-full px-4 sm:px-8 md:px-20 py-5" id="portfolio">
+          <div class="max-w-6xl mx-auto flex flex-col">
+            
+            <!-- Hero Section -->
+            <section class="w-full p-4 sm:p-6 md:p-10 rounded-xl bg-cover bg-center bg-no-repeat" data-aos="fade-up"
+              style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url('https://cdn.usegalileo.ai/sdxl10/4546df5e-9282-4923-86ad-a4a2678b3ebd.png');">
+              <div class="flex flex-col gap-3 text-left">
+                <h1 class="text-white text-3xl sm:text-4xl md:text-5xl font-black fade-in-up">Hi, I'm Anuj Rawat. I'm a Full Stack Developer.</h1>
+                <h2 class="text-white text-sm sm:text-base fade-in-up">I recently graduated from Sharda University Greater Noida. I'm passionate about designing and developing smart software that solves real-world problems.</h2>
+                <button class="w-fit bg-[#146eb8] text-white text-sm sm:text-base font-bold mt-3 px-4 py-2 rounded-lg hover:scale-105 transition-transform duration-300">View Portfolio</button>
+              </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="mt-10">
+              <h2 class="text-[#0e151b] text-xl sm:text-2xl font-bold mb-4" data-aos="fade-up">Skills</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="border border-[#d0dce7] p-4 rounded-lg bg-white" data-aos="zoom-in">
+                  <h3 class="font-bold text-[#0e151b]">Frontend Development</h3>
+                  <p class="text-sm text-[#4e7697]">React, Next.js</p>
+                </div>
+                <div class="border border-[#d0dce7] p-4 rounded-lg bg-white" data-aos="zoom-in" data-aos-delay="100">
+                  <h3 class="font-bold text-[#0e151b]">Backend Development</h3>
+                  <p class="text-sm text-[#4e7697]">Spring Boot, Node.js, Flask</p>
+                </div>
+                <div class="border border-[#d0dce7] p-4 rounded-lg bg-white" data-aos="zoom-in" data-aos-delay="200">
+                  <h3 class="font-bold text-[#0e151b]">Database Management</h3>
+                  <p class="text-sm text-[#4e7697]">SQL, NoSQL, Firebase</p>
+                </div>
+                <div class="border border-[#d0dce7] p-4 rounded-lg bg-white" data-aos="zoom-in" data-aos-delay="300">
+                  <h3 class="font-bold text-[#0e151b]">Problem Solving</h3>
+                  <p class="text-sm text-[#4e7697]">LeetCode, HackerRank</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="mt-10">
+              <h2 class="text-[#0e151b] text-xl sm:text-2xl font-bold mb-4" data-aos="fade-up">Projects</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="flex flex-col gap-2" data-aos="fade-up">
+                  <div class="aspect-square bg-cover bg-center rounded-lg" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/15296b01-41a8-4e96-aa66-d37dfe933dd7.png');"></div>
+                  <div>
+                    <h4 class="text-[#0e151b] font-semibold">Inventory Management System</h4>
+                    <p class="text-sm text-[#4e7697]">Tracks and manages tools in factories</p>
                   </div>
-                  <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#146eb8] text-slate-50 text-sm font-bold hover:scale-105 transition-transform duration-300">
-                    <span class="truncate">View Portfolio</span>
-                  </button>
+                </div>
+                <div class="flex flex-col gap-2" data-aos="fade-up" data-aos-delay="100">
+                  <div class="aspect-square bg-cover bg-center rounded-lg" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/4ea356fd-8911-4a69-b4de-b572b8b1c593.png');"></div>
+                  <div>
+                    <h4 class="text-[#0e151b] font-semibold">E-commerce App</h4>
+                    <p class="text-sm text-[#4e7697]">Shop and make secure payments</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2" data-aos="fade-up" data-aos-delay="200">
+                  <div class="aspect-square bg-cover bg-center rounded-lg" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/4b14b1b9-3ffb-439c-8a91-5dc0f936d3aa.png');"></div>
+                  <div>
+                    <h4 class="text-[#0e151b] font-semibold">Job Finder</h4>
+                    <p class="text-sm text-[#4e7697]">Find jobs based on your skills</p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2" data-aos="fade-up" data-aos-delay="300">
+                  <div class="aspect-square bg-cover bg-center rounded-lg" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/2f8e3345-5215-4fc4-88e5-4f8bf656f69c.png');"></div>
+                  <div>
+                    <h4 class="text-[#0e151b] font-semibold">Financial Dashboard</h4>
+                    <p class="text-sm text-[#4e7697]">Visualize and plan finances</p>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <h2 class="text-[#0e151b] text-[22px] font-bold px-4 pb-3 pt-5" data-aos="fade-up">Skills</h2>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 p-4">
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#d0dce7] bg-slate-50 p-4 flex-col" data-aos="zoom-in">
-                <h2 class="text-[#0e151b] text-base font-bold">Frontend Development</h2>
-                <p class="text-[#4e7697] text-sm">React, Next</p>
-              </div>
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#d0dce7] bg-slate-50 p-4 flex-col" data-aos="zoom-in">
-                <h2 class="text-[#0e151b] text-base font-bold">Backend Development</h2>
-                <p class="text-[#4e7697] text-sm">Spring Boot, Node.js, Express, Flask</p>
-              </div>
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#d0dce7] bg-slate-50 p-4 flex-col" data-aos="zoom-in">
-                <h2 class="text-[#0e151b] text-base font-bold">Database Management</h2>
-                <p class="text-[#4e7697] text-sm">SQL, NoSQL, Firebase</p>
-              </div>
-              <div class="flex flex-1 gap-3 rounded-lg border border-[#d0dce7] bg-slate-50 p-4 flex-col" data-aos="zoom-in">
-                <h2 class="text-[#0e151b] text-base font-bold">Problem Solving</h2>
-                <p class="text-[#4e7697] text-sm">LeetCode, HackerRank</p>
-              </div>
-            </div>
-
-            <h2 class="text-[#0e151b] text-[22px] font-bold px-4 pb-3 pt-5" data-aos="fade-up">Projects</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
-              <div class="flex flex-col gap-3 pb-3" data-aos="fade-up">
-                <div class="w-full aspect-square bg-center bg-no-repeat bg-cover rounded-xl" style='background-image: url("https://cdn.usegalileo.ai/sdxl10/15296b01-41a8-4e96-aa66-d37dfe933dd7.png");'></div>
-                <div>
-                  <p class="text-[#0e151b] text-base font-medium">Inventory Management System</p>
-                  <p class="text-[#4e7697] text-sm">Tracks tools and moulds used in factories</p>
-                </div>
-              </div>
-              <div class="flex flex-col gap-3 pb-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-full aspect-square bg-center bg-no-repeat bg-cover rounded-xl" style='background-image: url("https://cdn.usegalileo.ai/sdxl10/4ea356fd-8911-4a69-b4de-b572b8b1c593.png");'></div>
-                <div>
-                  <p class="text-[#0e151b] text-base font-medium">E-commerce App</p>
-                  <p class="text-[#4e7697] text-sm">Shop and make secure payments</p>
-                </div>
-              </div>
-              <div class="flex flex-col gap-3 pb-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-full aspect-square bg-center bg-no-repeat bg-cover rounded-xl" style='background-image: url("https://cdn.usegalileo.ai/sdxl10/4b14b1b9-3ffb-439c-8a91-5dc0f936d3aa.png");'></div>
-                <div>
-                  <p class="text-[#0e151b] text-base font-medium">Job Finder</p>
-                  <p class="text-[#4e7697] text-sm">Find jobs based on your skills</p>
-                </div>
-              </div>
-              <div class="flex flex-col gap-3 pb-3" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-full aspect-square bg-center bg-no-repeat bg-cover rounded-xl" style='background-image: url("https://cdn.usegalileo.ai/sdxl10/2f8e3345-5215-4fc4-88e5-4f8bf656f69c.png");'></div>
-                <div>
-                  <p class="text-[#0e151b] text-base font-medium">Financial Dashboard</p>
-                  <p class="text-[#4e7697] text-sm">Visualize and plan finances</p>
-                </div>
-              </div>
-            </div>
-
+            </section>
           </div>
-        </div>
+        </main>
       </div>
     </div>
 
