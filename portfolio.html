@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Anuj Rawat</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body class="bg-slate-50" style='font-family: Manrope, "Noto Sans", sans-serif;'>
+    <div class="relative flex flex-col min-h-screen overflow-x-hidden">
+      <div class="flex-grow flex flex-col">
+        <!-- Header -->
+        <header class="flex flex-col sm:flex-row items-center justify-between border-b border-[#e7eef3] px-4 sm:px-10 py-3 gap-3 sm:gap-0" data-aos="fade-down">
+          <div class="flex items-center gap-4 text-[#0e151b]">
+            <div class="w-6 h-6">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_6_319)">
+                  <path d="M8.578 8.578c-3.05 3.05-5.127 6.936-5.969 11.167-.841 4.23-.41 8.615 1.24 12.6 1.65 3.985 4.446 7.392 8.032 9.788C15.468 44.53 19.686 45.81 24 45.81c4.313 0 8.53-1.279 12.116-3.675 3.587-2.396 6.382-5.802 8.033-9.788 1.65-3.985 2.081-8.37 1.24-12.6-.842-4.231-2.919-8.117-5.969-11.167L24 24 8.578 8.578Z" fill="currentColor"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_6_319"><rect width="48" height="48" fill="white"/></clipPath>
+                </defs>
+              </svg>
+            </div>
+            <h2 class="text-[#0e151b] text-lg font-bold tracking-[-0.015em]">Anuj Rawat</h2>
+          </div>
+          <div class="flex justify-center sm:justify-end gap-6 flex-wrap">
+            <a class="text-[#0e151b] text-sm font-medium" href="index.html">Home</a>
+            <a class="text-[#0e151b] text-sm font-medium" href="#skills">Skills</a>
+            <a class="text-[#0e151b] text-sm font-medium" href="#projects">Projects</a>
+          </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="w-full px-4 sm:px-8 md:px-20 py-5">
+          <div class="max-w-6xl mx-auto flex flex-col">
+            <!-- Skills Section -->
+            <section id="skills" class="mt-10">
+              <h2 class="text-[#0e151b] text-xl sm:text-2xl font-bold mb-4" data-aos="fade-up">Skills</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="border border-[#d0dce7] p-4 rounded-lg bg-white" data-aos="zoom-in">
+                  <h3 class="font-bold text-[#0e151b]">Frontend Development</h3>
+                  <p class="text-sm text-[#4e7697]">React, Next.js</p>
+                </div>
+                <div class="border border-[#d0dce7] p-4 rounded-lg bg-white" data-aos="zoom-in" data-aos-delay="100">
+                  <h3 class="font-bold text-[#0e151b]">Backend Development</h3>
+                  <p class="text-sm text-[#4e7697]">Spring Boot, Node.js, Flask</p>
+                </div>
+                <div class="border border-[#d0dce7] p-4 rounded-lg bg-white" data-aos="zoom-in" data-aos-delay="200">
+                  <h3 class="font-bold text-[#0e151b]">Database Management</h3>
+                  <p class="text-sm text-[#4e7697]">SQL, NoSQL, Firebase</p>
+                </div>
+                <div class="border border-[#d0dce7] p-4 rounded-lg bg-white" data-aos="zoom-in" data-aos-delay="300">
+                  <h3 class="font-bold text-[#0e151b]">Problem Solving</h3>
+                  <p class="text-sm text-[#4e7697]">LeetCode, HackerRank</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Projects Section -->
+<section id="projects" class="mt-10">
+  <h2 class="text-[#0e151b] text-xl sm:text-2xl font-bold mb-4" data-aos="fade-up">Projects</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    <div class="flex flex-col gap-2" data-aos="fade-up">
+      <div class="aspect-square bg-cover bg-center rounded-lg" style="background-image: url('https://cdn.usegalileo.ai/sdxl10/15296b01-41a8-4e96-aa66-d37dfe933dd7.png');"></div>
+      <div>
+        <h4 class="text-[#0e151b] font-semibold">Inventory Management System</h4>
+        <p class="text-sm text-[#4e7697]">Tracks and manages tools in factories</p>
+      </div>
+    </div>
+    <div class="flex flex-col gap-2" data-aos="fade-up" data-aos-delay="100">
+      <div class="aspect-square bg-cover bg-center rounded-lg" style="background-image: url('https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=720&q=80');"></div>
+      <div>
+        <h4 class="text-[#0e151b] font-semibold">E-commerce App</h4>
+        <p class="text-sm text-[#4e7697]">Shop and make secure payments</p>
+      </div>
+    </div>
+    <div class="flex flex-col gap-2" data-aos="fade-up" data-aos-delay="200">
+      <div class="aspect-square bg-cover bg-center rounded-lg" style="background-image: url('glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg');"></div>
+      <div>
+        <h4 class="text-[#0e151b] font-semibold">Job Finder</h4>
+        <p class="text-sm text-[#4e7697]">Find jobs based on your skills</p>
+      </div>
+    </div>
+    <div class="flex flex-col gap-2" data-aos="fade-up" data-aos-delay="300">
+      <div class="aspect-square bg-cover bg-center rounded-lg" style="background-image: url('luke-chesser-JKUTrJ4vK00-unsplash.jpg');"></div>
+      <div>
+        <h4 class="text-[#0e151b] font-semibold">Financial Dashboard</h4>
+        <p class="text-sm text-[#4e7697]">Visualize and plan finances</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
+  </body>
+</html>

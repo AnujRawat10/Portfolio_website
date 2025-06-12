@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anuj Rawat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About - Anuj Rawat</title>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
       rel="stylesheet"
@@ -31,6 +31,7 @@
   <body class="bg-slate-50" style='font-family: Manrope, "Noto Sans", sans-serif;'>
     <div class="relative flex flex-col min-h-screen overflow-x-hidden">
       <div class="flex-grow flex flex-col">
+        <!-- Header same as index.html -->
         <header class="flex flex-col sm:flex-row items-center justify-between border-b border-[#e7eef3] px-4 sm:px-10 py-3 gap-3 sm:gap-0" data-aos="fade-down">
           <div class="flex items-center gap-4 text-[#0e151b]">
             <div class="w-6 h-6">
@@ -48,23 +49,25 @@
           <div class="flex justify-center sm:justify-end gap-6 flex-wrap">
             <a class="text-[#0e151b] text-sm font-medium" href="portfolio.html#skills">Skills</a>
             <a class="text-[#0e151b] text-sm font-medium" href="portfolio.html#projects">Projects</a>
-            <a class="text-[#0e151b] text-sm font-medium" href="about.html">About</a>
+            <a class="text-[#0e151b] text-sm font-medium" href="index.html">Home</a>
           </div>
         </header>
-        <main class="w-full px-4 sm:px-8 md:px-20 py-5">
-          <div class="max-w-6xl mx-auto flex flex-col">
-            <section class="w-full p-4 sm:p-6 md:p-10 rounded-xl bg-cover bg-center bg-no-repeat" data-aos="fade-up"
-              style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url('https://cdn.usegalileo.ai/sdxl10/4546df5e-9282-4923-86ad-a4a2678b3ebd.png');">
-              <div class="flex flex-col gap-3 text-left">
-                <h1 class="text-white text-3xl sm:text-4xl md:text-5xl font-black fade-in-up">Hi, I'm Anuj Rawat. I'm a Full Stack Developer.</h1>
-                <h2 class="text-white text-sm sm:text-base fade-in-up">I recently graduated from Sharda University Greater Noida. I'm passionate about designing and developing smart software that solves real-world problems.</h2>
-                <a href="portfolio.html#projects" class="inline-block w-fit bg-[#146eb8] text-white text-sm sm:text-base font-bold mt-3 px-4 py-2 rounded-lg hover:scale-105 transition-transform duration-300">View Portfolio</a>
-              </div>
-            </section>
+
+        <main class="w-full px-4 sm:px-8 md:px-20 py-10">
+          <div class="max-w-4xl mx-auto flex flex-col gap-6">
+            <h1 class="text-4xl font-extrabold text-[#0e151b]" data-aos="fade-up">About Me</h1>
+            <p class="text-[#334155] text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="100">
+              Hello! I'm Anuj Rawat, a passionate Full Stack Developer recently graduated from Sharda University Greater Noida. I specialize in building scalable web applications with modern technologies including MERN stack, Spring Boot, and Flask. I enjoy creating smart software solutions that solve real-world problems.
+            </p>
+            <p class="text-[#334155] text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+              Beyond coding, I am enthusiastic about exploring generative AI and large language models to integrate intelligent features into applications. I am constantly learning and looking forward to contributing to innovative projects and collaborative teams.
+            </p>
+            <a href="index.html#projects" class="inline-block w-fit bg-[#146eb8] text-white text-sm sm:text-base font-bold mt-5 px-6 py-3 rounded-lg hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">View My Portfolio</a>
           </div>
         </main>
       </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
       AOS.init({ duration: 800, once: true });
