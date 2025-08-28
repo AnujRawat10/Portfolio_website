@@ -40,18 +40,7 @@ export default function Navigation({ currentBgColor }: NavigationProps) {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex justify-between items-center h-16'>
           {/* Logo */}
-          <div className='flex-shrink-0'>
-            <Image
-              src='/brand/wouff_black_logo.png'
-              alt='Wouff'
-              width={180}
-              height={28}
-              priority
-              className={`h-7 w-auto md:h-8 ${
-                !isLightBackground(currentBgColor) ? "invert" : ""
-              }`}
-            />
-          </div>
+          <div className='flex-shrink-0 text-black'>Anuj</div>
 
           {/* Desktop Navigation */}
           <div className='hidden md:block'>
