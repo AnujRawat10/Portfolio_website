@@ -29,60 +29,7 @@ export default function Home() {
 
       <ServicesSection />
 
-      <ProductsForPets
-        products={[
-          {
-            id: 1,
-            name: "Kyroi – Shampoo",
-            price: 20,
-            currency: "USD",
-            type: "Physical",
-            image: "/ProductsForPets/p1.jpg",
-            href: "/product/kyroi-1",
-          },
-          {
-            id: 2,
-            name: "Moly Moly – Shampoo",
-            price: 20,
-            currency: "USD",
-            type: "Physical",
-            image: "/ProductsForPets/p2.jpg",
-            href: "/product/moly-1",
-          },
-        ]}
-        viewAllHref='/shop'
-        onAddToCart={(p) => console.log("Add to cart:", p)}
-      />
-
-      <InstaPlayingCardsLite
-        heading='My Social Media'
-        profileUrl='https://www.instagram.com/anujrawat1/'
-        items={[
-          {
-            id: "ig1",
-            title: "Reel 1",
-            poster: "/insta/1.jpeg",
-            shortcode: "DD2lmHEKkwX",
-            angle: -10,
-            badge: "New",
-          },
-          {
-            id: "ig2",
-            title: "Reel 2",
-            poster: "/insta/2.jpeg",
-            shortcode: "DGkqYy7JsBE",
-            angle: 8,
-            badge: "Featured",
-          },
-          {
-            id: "ig3",
-            title: "Reel 3",
-            poster: "/insta/3.jpeg",
-            shortcode: "DI9Sb5yypcE",
-            angle: -6,
-          },
-        ]}
-      />
+      <ProductsForPets />
 
       <TestimonialsSection />
       {/* <BeforeAfter />
