@@ -52,12 +52,6 @@ export default function Navigation({ currentBgColor }: NavigationProps) {
                 Projects
               </a>
               <a
-                href='#testimonials'
-                className={`${textColor} ${hoverColor} transition-colors px-3 py-2 text-sm font-medium lowercase`}
-              >
-                about
-              </a>
-              <a
                 href='#contact'
                 className={`${textColor} ${hoverColor} transition-colors px-3 py-2 text-sm font-medium lowercase`}
               >
