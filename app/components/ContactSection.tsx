@@ -150,10 +150,12 @@ export default function ContactSection({
               
               <div className="relative z-10">
                 <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-2">
-                  Let's Connect
+                  Let&apos;s Connect
+
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Send me a message via WhatsApp. I'll get back to you soon!
+                  I&apos;ll get back to you soon!
+
                 </p>
 
                 <div className="space-y-5">
