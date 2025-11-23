@@ -78,7 +78,7 @@ export default function Navigation({ currentBgColor }: NavigationProps) {
                   : "text-white hover:text-gray-100"
               }`}
             >
-              Hire Me
+              Contact Me
             </button>
           </div>
 

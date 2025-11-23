@@ -74,7 +74,7 @@ export default function Footer() {
         {/* Divider & bottom bar */}
         <div className='mt-10 border-t border-white/10 pt-6'>
           <div className='flex flex-col items-center justify-between gap-4 md:flex-row'>
-            <div className='flex flex-wrap justify-center gap-x-6 text-sm text-gray-300'>
+            {/* <div className='flex flex-wrap justify-center gap-x-6 text-sm text-gray-300'>
               <Link
                 href='/privacy'
                 className='hover:text-white transition-colors'
@@ -96,14 +96,11 @@ export default function Footer() {
               >
                 Password
               </Link>
-            </div>
+            </div> */}
 
             <div className='text-center md:text-right text-sm text-gray-300'>
-              <p>© 2025 Company name. All rights reserved.</p>
-              <p className='text-xs'>
-                Created by <span className='text-white'>Anuj</span> • Powered by{" "}
-                <span className='text-white'>DDC</span>
-              </p>
+             <p className='text-xs'>
+                Created by <span className='text-white'>Anuj</span></p>
             </div>
           </div>
         </div>
