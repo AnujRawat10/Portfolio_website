@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { PawPrint, ChevronRight, Send, User, Mail, MessageSquare, X } from "lucide-react";
+import Image from "next/image";
 
 type Props = {
   eyebrow?: string;
@@ -10,7 +11,7 @@ type Props = {
   badgeImage: string;
   badgeAlt?: string;
   panelBg?: string;
-  primaryHref?: string;
+  
   secondaryHref?: string;
   whatsappNumber?: string;
 };
@@ -24,7 +25,7 @@ export default function ContactSection({
   badgeImage = "/badge.jpg",
   badgeAlt = "Profile badge",
   panelBg = "#cfe8f6",
-  primaryHref = "#contact",
+  
   secondaryHref = "#services",
   whatsappNumber = "918126133363",
 }: Props) {
@@ -108,7 +109,7 @@ export default function ContactSection({
                 style={{ backgroundColor: panelBg }}
               >
                 <div className="relative w-full aspect-[4/5] sm:aspect-[16/10] lg:aspect-[16/9] rounded-[28px] overflow-hidden">
-                  <img
+                  <Image
                     src={heroImage}
                     alt={heroAlt}
                     className="w-full h-full object-cover"
@@ -117,7 +118,7 @@ export default function ContactSection({
 
                 <div className="absolute -top-6 left-6 sm:-top-7 sm:left-7 z-20">
                   <div className="relative h-24 w-24 sm:h-28 sm:w-28 rounded-[20px] border-[6px] border-white shadow-xl overflow-hidden bg-white">
-                    <img
+                    <Image
                       src={badgeImage}
                       alt={badgeAlt}
                       className="w-full h-full object-cover"
