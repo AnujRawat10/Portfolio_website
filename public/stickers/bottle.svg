@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 140" fill="none">
+  <!-- Cap -->
+  <rect x="15" y="5" width="20" height="15" rx="3" fill="#1a1a1a" stroke="#333" stroke-width="1.5"/>
+  <!-- Neck -->
+  <rect x="18" y="18" width="14" height="12" rx="2" fill="#222" stroke="#333" stroke-width="1"/>
+  <!-- Body -->
+  <path d="M14 30 Q10 35 10 45 V115 Q10 125 18 128 H32 Q40 125 40 115 V45 Q40 35 36 30 Z" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+  <!-- Label -->
+  <rect x="14" y="55" width="22" height="35" rx="3" fill="#2D5A27"/>
+  <text x="25" y="76" text-anchor="middle" font-family="serif" font-size="6" fill="white" font-weight="bold">HYDRO</text>
+</svg>

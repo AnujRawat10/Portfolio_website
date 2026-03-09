@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 90" fill="none">
+  <!-- Sole -->
+  <path d="M15 70 Q10 70 8 65 L8 58 Q8 55 12 55 H125 Q132 55 135 60 V65 Q135 70 130 70 Z" fill="#ddd" stroke="#aaa" stroke-width="1.5"/>
+  <!-- Shoe body -->
+  <path d="M12 58 Q15 20 55 18 Q80 16 95 25 Q110 34 125 40 Q135 45 135 55 H12 Z" fill="#2D6A4F" stroke="#1B4332" stroke-width="2"/>
+  <!-- Stripes -->
+  <line x1="50" y1="25" x2="35" y2="55" stroke="white" stroke-width="3" opacity="0.7"/>
+  <line x1="65" y1="22" x2="50" y2="55" stroke="white" stroke-width="3" opacity="0.7"/>
+  <line x1="80" y1="25" x2="65" y2="55" stroke="white" stroke-width="3" opacity="0.7"/>
+  <!-- Tongue -->
+  <path d="M45 20 Q50 8 60 10 Q70 12 65 22" fill="#3A8C5E" stroke="#1B4332" stroke-width="1.5"/>
+  <!-- Laces -->
+  <line x1="48" y1="18" x2="62" y2="16" stroke="white" stroke-width="1.5"/>
+  <line x1="46" y1="24" x2="60" y2="22" stroke="white" stroke-width="1.5"/>
+</svg>

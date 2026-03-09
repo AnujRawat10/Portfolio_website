@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 120" fill="none">
+  <!-- Pole -->
+  <line x1="10" y1="5" x2="10" y2="115" stroke="#888" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="10" cy="5" r="3" fill="#FFD700"/>
+  <!-- Flag -->
+  <rect x="13" y="10" width="60" height="40" fill="#FF6B35" stroke="#E05525" stroke-width="1.5"/>
+  <rect x="13" y="10" width="60" height="13.3" fill="#fff"/>
+  <rect x="13" y="36.7" width="60" height="13.3" fill="#138808"/>
+  <!-- Chakra -->
+  <circle cx="43" cy="30" r="6" stroke="#000080" stroke-width="1.5" fill="none"/>
+</svg>

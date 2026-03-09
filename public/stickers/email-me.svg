@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 100">
+  <ellipse cx="70" cy="50" rx="68" ry="48" fill="white" stroke="#222" stroke-width="2.5"/>
+  <text x="70" y="35" text-anchor="middle" font-family="'Segoe Script','Comic Sans MS',cursive" font-size="18" fill="#222" font-style="italic" font-weight="bold">Email</text>
+  <text x="70" y="58" text-anchor="middle" font-family="'Segoe Script','Comic Sans MS',cursive" font-size="22" fill="#222" font-style="italic" font-weight="bold">Me!</text>
+  <!-- Mail icon -->
+  <g transform="translate(48,64)">
+    <rect x="0" y="2" width="44" height="28" rx="4" fill="none" stroke="#222" stroke-width="2"/>
+    <path d="M2 4 L22 18 L42 4" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 130" fill="none">
+  <rect x="20" y="8" width="140" height="90" rx="8" fill="#C0C0C0" stroke="#999" stroke-width="2"/>
+  <rect x="28" y="15" width="124" height="76" rx="3" fill="#1a1a1a"/>
+  <rect x="32" y="19" width="116" height="68" rx="2" fill="#222"/>
+  <!-- Apple logo -->
+  <g transform="translate(82,45) scale(0.3)">
+    <path d="M15-25C15-25 22-35 30-35C38-35 42-28 42-28C42-28 30-22 30-10C30 2 42 8 42 8C42 8 34 25 26 25C22 25 18 22 14 22C10 22 6 25 2 25C-6 25-14 8-14 8C-14 8-22-10-22-20C-22-30-14-35-6-35C0-35 8-28 15-25Z" fill="#aaa"/>
+  </g>
+  <!-- Base -->
+  <path d="M5 100 H175 Q178 100 178 103 V108 Q178 112 175 112 H5 Q2 112 2 108 V103 Q2 100 5 100Z" fill="#D4D4D4" stroke="#aaa" stroke-width="1"/>
+  <rect x="70" y="98" width="40" height="4" rx="2" fill="#bbb"/>
+</svg>

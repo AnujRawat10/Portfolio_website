@@ -1,18 +1,32 @@
-// app/layout.tsx
 import type { Metadata } from "next";
-import { Sora } from "next/font/google";
+import { Roboto_Mono, Manrope } from "next/font/google";
 import "./globals.css";
 
-const sora = Sora({
+const robotoMono = Roboto_Mono({
   subsets: ["latin"],
-  variable: "--font-sora",
+  variable: "--font-roboto-mono",
+  display: "swap",
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Anuj Rawat",
-  description:
-    "Comprehensive pet services, delivered with love. Boarding, grooming, retail, training, and transport services for your furry friends.",
+  description: 'Portfolio — Creative Developer & Designer',
+  openGraph: {
+    title: "Anuj Rawat",
+    description: 'Creative Developer & Designer',
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Anuj Rawat",
+    description: 'Creative Developer & Designer',
+  },
 };
 
 export default function RootLayout({
@@ -21,8 +35,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
-      <body className={`${sora.variable} antialiased`}>{children}</body>
+    <html lang="en">
+      <body
+        className={`${robotoMono.variable} ${manrope.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

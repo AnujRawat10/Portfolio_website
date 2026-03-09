@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 160" fill="none">
+  <!-- Main body -->
+  <rect x="8" y="15" width="64" height="135" rx="4" fill="#CC0000" stroke="#990000" stroke-width="2"/>
+  <!-- Top crown -->
+  <rect x="4" y="10" width="72" height="12" rx="3" fill="#DD1111" stroke="#990000" stroke-width="1.5"/>
+  <rect x="12" y="4" width="56" height="10" rx="3" fill="#CC0000" stroke="#990000" stroke-width="1.5"/>
+  <!-- Windows -->
+  <rect x="16" y="28" width="48" height="22" rx="2" fill="#87CEEB" stroke="#990000" stroke-width="1.5" opacity="0.8"/>
+  <line x1="28" y1="28" x2="28" y2="50" stroke="#990000" stroke-width="1"/>
+  <line x1="40" y1="28" x2="40" y2="50" stroke="#990000" stroke-width="1"/>
+  <line x1="52" y1="28" x2="52" y2="50" stroke="#990000" stroke-width="1"/>
+  <!-- Door panels -->
+  <rect x="16" y="55" width="48" height="28" rx="2" fill="#87CEEB" stroke="#990000" stroke-width="1.5" opacity="0.6"/>
+  <line x1="28" y1="55" x2="28" y2="83" stroke="#990000" stroke-width="1"/>
+  <line x1="40" y1="55" x2="40" y2="83" stroke="#990000" stroke-width="1"/>
+  <line x1="52" y1="55" x2="52" y2="83" stroke="#990000" stroke-width="1"/>
+  <!-- Bottom panel -->
+  <rect x="16" y="88" width="48" height="50" rx="2" fill="#AA0000" stroke="#990000" stroke-width="1.5"/>
+  <!-- TELEPHONE text -->
+  <text x="40" y="146" text-anchor="middle" font-family="serif" font-size="7" fill="white" font-weight="bold" letter-spacing="1">TELEPHONE</text>
+</svg>
