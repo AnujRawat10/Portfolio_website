@@ -118,62 +118,23 @@ export default function Home() {
 
       {/* CENTERED CARD */}
       <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
-        <div className="w-full max-w-[500px] px-4">
+        <div className="w-full max-w-[500px] px-4 sm:px-4">
           {/* Stacked deck effect */}
           <div className="relative">
             {/* Card shadow 3 (deepest) */}
-            <div className="absolute inset-x-4 -bottom-3 h-full bg-black/40 border-2 border-white/[0.06] rounded-[2rem]" />
+            <div className="absolute inset-x-4 -bottom-3 h-full bg-black/40 border-2 border-white/[0.06] rounded-[1.5rem] sm:rounded-[2rem]" />
             {/* Card shadow 2 */}
-            <div className="absolute inset-x-2.5 -bottom-2 h-full bg-black/60 border-2 border-white/[0.1] rounded-[2rem]" />
+            <div className="absolute inset-x-2.5 -bottom-2 h-full bg-black/60 border-2 border-white/[0.1] rounded-[1.5rem] sm:rounded-[2rem]" />
             {/* Card shadow 1 */}
-            <div className="absolute inset-x-1 -bottom-1 h-full bg-black/80 border-2 border-white/[0.15] rounded-[2rem]" />
+            <div className="absolute inset-x-1 -bottom-1 h-full bg-black/80 border-2 border-white/[0.15] rounded-[1.5rem] sm:rounded-[2rem]" />
 
             {/* Main card */}
             <div
-              className="relative bg-black border-2 border-white rounded-[2rem] [container-type:size] pointer-events-auto"
+              className="relative bg-black border-2 border-white rounded-[1.5rem] sm:rounded-[2rem] [container-type:size] pointer-events-auto aspect-[3/4] sm:aspect-[4/3] overflow-hidden"
               style={{
-                aspectRatio: "4 / 3",
                 boxShadow: "0 20px 80px rgba(0,0,0,0.8)",
-                clipPath: "inset(0 round 2rem)",
               }}
             >
-              {/* Nav inside card — top right */}
-              <div className="absolute top-[6cqw] right-[6cqw] z-30 flex items-center gap-[2cqw] pointer-events-auto">
-                <div className="w-[6cqw] h-[6cqw] flex items-center justify-center">
-                  <button
-                    onClick={prev}
-                    disabled={current === 0}
-                    className={`w-full h-full rounded-full border flex items-center justify-center transition-all ${
-                      current > 0
-                        ? "border-white text-white hover:scale-110 active:scale-125"
-                        : "border-white/50 text-white/50 cursor-not-allowed"
-                    }`}
-                    aria-label="Previous slide"
-                  >
-                    <ChevronUp className="w-[3cqw] h-[3cqw]" strokeWidth={1.5} />
-                  </button>
-                </div>
-                <div className="flex items-center justify-center font-bold tracking-widest text-white font-mono gap-[1cqw] text-[3cqw]">
-                  <span>{current + 1}</span>
-                  <span className="opacity-50">/</span>
-                  <span>{total}</span>
-                </div>
-                <div className="w-[6cqw] h-[6cqw] flex items-center justify-center">
-                  <button
-                    onClick={next}
-                    disabled={current === total - 1}
-                    className={`w-full h-full rounded-full border flex items-center justify-center transition-all ${
-                      current < total - 1
-                        ? "border-white text-white hover:scale-110 active:scale-125"
-                        : "border-white/50 text-white/50 cursor-not-allowed"
-                    }`}
-                    aria-label="Next slide"
-                  >
-                    <ChevronDown className="w-[3cqw] h-[3cqw]" strokeWidth={1.5} />
-                  </button>
-                </div>
-              </div>
-
               {/* Slides */}
               {slides.map((slide, i) => (
                 <div
@@ -192,6 +153,39 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* NAVIGATION — bottom center on mobile, inside card on desktop */}
+      <div className="absolute bottom-6 sm:bottom-auto sm:top-1/2 sm:right-8 sm:-translate-y-1/2 left-1/2 sm:left-auto -translate-x-1/2 sm:translate-x-0 z-30 flex sm:flex-col items-center gap-3 pointer-events-auto">
+        <button
+          onClick={prev}
+          disabled={current === 0}
+          className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full border flex items-center justify-center transition-all ${
+            current > 0
+              ? "border-white text-white hover:scale-110 active:scale-125 bg-black/40 backdrop-blur-sm"
+              : "border-white/30 text-white/30 cursor-not-allowed bg-black/20"
+          }`}
+          aria-label="Previous slide"
+        >
+          <ChevronUp className="w-4 h-4 sm:w-5 sm:h-5" strokeWidth={1.5} />
+        </button>
+        <div className="flex items-center justify-center font-bold tracking-widest text-white font-mono gap-1 text-sm sm:text-base">
+          <span>{current + 1}</span>
+          <span className="opacity-50">/</span>
+          <span>{total}</span>
+        </div>
+        <button
+          onClick={next}
+          disabled={current === total - 1}
+          className={`w-9 h-9 sm:w-10 sm:h-10 rounded-full border flex items-center justify-center transition-all ${
+            current < total - 1
+              ? "border-white text-white hover:scale-110 active:scale-125 bg-black/40 backdrop-blur-sm"
+              : "border-white/30 text-white/30 cursor-not-allowed bg-black/20"
+          }`}
+          aria-label="Next slide"
+        >
+          <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5" strokeWidth={1.5} />
+        </button>
       </div>
     </div>
   );
