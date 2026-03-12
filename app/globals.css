@@ -29,10 +29,10 @@ body {
   width: 400vw;
   height: 400vh;
   pointer-events: none;
-  opacity: 0.4;
+  opacity: 0.7;
   background-image:
-    linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.18) 1px, transparent 1px);
   background-size: 40px 40px;
   background-position: center;
   z-index: 0;

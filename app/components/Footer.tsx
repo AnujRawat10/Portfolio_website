@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import { Instagram, Linkedin, Github, Mail, MessageCircle } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -39,32 +39,28 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className='flex gap-4'>
-              <a
-                aria-label='Instagram'
-                className='grid h-10 w-10 place-items-center rounded-full bg-gray-700 hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50'
-                href='https://www.instagram.com/anujrawat1?utm_source=ig_web_button_share_sheet&igsh=cHR1NzMycTZzODE='
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <Instagram className='h-5 w-5' />
-              </a>
-              <a
-                aria-label='LinkedIn'
-                className='grid h-10 w-10 place-items-center rounded-full bg-gray-700 hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50'
-                href='https://www.linkedin.com/in/anujrawat1/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <Linkedin className='h-5 w-5' />
-              </a>
-              <a
-                aria-label='Twitter'
-                className='grid h-10 w-10 place-items-center rounded-full bg-gray-700 hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50'
-                href='#'
-              >
-                <Twitter className='h-5 w-5' />
-              </a>
+            <div className='flex flex-wrap gap-3'>
+              {[
+                { label: "GitHub", href: "https://github.com/AnujRawat10", icon: <Github className='h-5 w-5' /> },
+                { label: "Instagram", href: "https://www.instagram.com/life.of.anujrawat/", icon: <Instagram className='h-5 w-5' /> },
+                { label: "LinkedIn", href: "https://www.linkedin.com/in/anujrawat1/", icon: <Linkedin className='h-5 w-5' /> },
+                { label: "Medium", href: "https://medium.com/@anujrawatofficial.new", icon: <span className='text-sm font-bold'>M</span> },
+                { label: "Reddit", href: "https://www.reddit.com/user/LifeOfAnujRawat/", icon: <MessageCircle className='h-5 w-5' /> },
+                { label: "ORCID", href: "https://orcid.org/my-orcid?orcid=0009-0009-6510-4496", icon: <span className='text-sm font-bold'>iD</span> },
+                { label: "WhatsApp", href: "https://wa.me/918126133363", icon: <span className='text-sm'>💬</span> },
+                { label: "Email", href: "mailto:anujrawat9639@mail.com", icon: <Mail className='h-5 w-5' /> },
+              ].map((s) => (
+                <a
+                  key={s.label}
+                  aria-label={s.label}
+                  className='grid h-10 w-10 place-items-center rounded-full bg-gray-700 hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-white/50'
+                  href={s.href}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {s.icon}
+                </a>
+              ))}
             </div>
           </div>
 

@@ -2,10 +2,40 @@
   <!-- Pole -->
   <line x1="10" y1="5" x2="10" y2="115" stroke="#888" stroke-width="3" stroke-linecap="round"/>
   <circle cx="10" cy="5" r="3" fill="#FFD700"/>
-  <!-- Flag -->
-  <rect x="13" y="10" width="60" height="40" fill="#FF6B35" stroke="#E05525" stroke-width="1.5"/>
-  <rect x="13" y="10" width="60" height="13.3" fill="#fff"/>
-  <rect x="13" y="36.7" width="60" height="13.3" fill="#138808"/>
-  <!-- Chakra -->
-  <circle cx="43" cy="30" r="6" stroke="#000080" stroke-width="1.5" fill="none"/>
+
+  <!-- Flag body -->
+  <rect x="13" y="10" width="60" height="40" fill="#FFFFFF"/>
+
+  <!-- Saffron stripe -->
+  <rect x="13" y="10" width="60" height="13.33" fill="#FF9933"/>
+
+  <!-- White stripe (middle) is the base rect -->
+
+  <!-- Green stripe -->
+  <rect x="13" y="36.67" width="60" height="13.33" fill="#138808"/>
+
+  <!-- Ashoka Chakra - navy blue circle -->
+  <circle cx="43" cy="30" r="6.5" stroke="#000080" stroke-width="1.2" fill="none"/>
+
+  <!-- Ashoka Chakra - 24 spokes -->
+  <g stroke="#000080" stroke-width="0.6">
+    <line x1="43" y1="23.8" x2="43" y2="36.2"/>
+    <line x1="43.85" y1="23.83" x2="42.15" y2="36.17"/>
+    <line x1="44.68" y1="23.93" x2="41.32" y2="36.07"/>
+    <line x1="45.47" y1="24.1" x2="40.53" y2="35.9"/>
+    <line x1="46.22" y1="24.34" x2="39.78" y2="35.66"/>
+    <line x1="46.91" y1="24.64" x2="39.09" y2="35.36"/>
+    <line x1="47.52" y1="25.01" x2="38.48" y2="34.99"/>
+    <line x1="48.05" y1="25.43" x2="37.95" y2="34.57"/>
+    <line x1="48.49" y1="25.91" x2="37.51" y2="34.09"/>
+    <line x1="48.83" y1="26.43" x2="37.17" y2="33.57"/>
+    <line x1="49.07" y1="26.98" x2="36.93" y2="33.02"/>
+    <line x1="49.2" y1="27.57" x2="36.8" y2="32.43"/>
+  </g>
+
+  <!-- Chakra center dot -->
+  <circle cx="43" cy="30" r="1" fill="#000080"/>
+
+  <!-- Subtle wave effect -->
+  <path d="M73 10 Q75 20 73 30 Q71 40 73 50" stroke="rgba(0,0,0,0.05)" stroke-width="0.5" fill="none"/>
 </svg>

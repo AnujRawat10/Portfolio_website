@@ -1,10 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 100">
-  <ellipse cx="70" cy="50" rx="68" ry="48" fill="white" stroke="#222" stroke-width="2.5"/>
-  <text x="70" y="35" text-anchor="middle" font-family="'Segoe Script','Comic Sans MS',cursive" font-size="18" fill="#222" font-style="italic" font-weight="bold">Email</text>
-  <text x="70" y="58" text-anchor="middle" font-family="'Segoe Script','Comic Sans MS',cursive" font-size="22" fill="#222" font-style="italic" font-weight="bold">Me!</text>
-  <!-- Mail icon -->
-  <g transform="translate(48,64)">
-    <rect x="0" y="2" width="44" height="28" rx="4" fill="none" stroke="#222" stroke-width="2"/>
-    <path d="M2 4 L22 18 L42 4" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <circle cx="128" cy="128" r="128" fill="#EA4335"/>
+  <g transform="translate(48, 72)">
+    <rect x="0" y="0" width="160" height="112" rx="12" fill="#fff"/>
+    <path d="M8 8L80 64L152 8" fill="none" stroke="#EA4335" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8 104L56 68" fill="none" stroke="#EA4335" stroke-width="8" stroke-linecap="round"/>
+    <path d="M152 104L104 68" fill="none" stroke="#EA4335" stroke-width="8" stroke-linecap="round"/>
   </g>
 </svg>

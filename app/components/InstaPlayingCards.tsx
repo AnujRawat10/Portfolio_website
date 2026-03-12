@@ -20,7 +20,7 @@ type Props = {
 
 export default function InstaPlayingCardsLite({
   heading = "My Social Media",
-  profileUrl = "https://www.instagram.com/anujrawat1/",
+  profileUrl = "https://www.instagram.com/life.of.anujrawat/",
   items = [],
 }: Props) {
   const [active, setActive] = useState<ReelCard | null>(null);
