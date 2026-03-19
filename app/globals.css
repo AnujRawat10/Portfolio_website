@@ -1,12 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #f5f5f5;
-  --accent: #c8ff00;
-  --muted: #888888;
-  --font-display: var(--font-manrope);
-  --font-body: var(--font-manrope);
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --accent: #6D5ACD;
+  --muted: #71717a;
+  --border: #e4e4e7;
+  --surface: #f8f8fa;
+  --card: #f4f4f5;
+  --font-display: var(--font-inter);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-roboto-mono);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --font-display: var(--font-inter);
   --font-mono: var(--font-roboto-mono);
 }
 
@@ -15,7 +30,7 @@
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -27,124 +42,174 @@ body {
 
 ::selection {
   background: var(--accent);
-  color: #000;
+  color: #fff;
 }
 
 /* ═══ Typography ═══ */
 .font-display { font-family: var(--font-display), system-ui, sans-serif; }
 .font-mono { font-family: var(--font-mono), ui-monospace, monospace; }
 
-.text-jumbo {
-  font-size: clamp(3rem, 12vw, 10rem);
-  line-height: 0.9;
+.ar-display {
+  font-size: clamp(2.8rem, 7vw, 7rem);
+  line-height: 1;
   letter-spacing: -0.03em;
-  font-weight: 800;
+  font-weight: 700;
 }
 
-.text-heading {
-  font-size: clamp(2rem, 6vw, 5rem);
-  line-height: 1;
+.ar-headline {
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1.1;
   letter-spacing: -0.02em;
   font-weight: 700;
 }
 
-.text-subheading {
-  font-size: clamp(1.25rem, 3vw, 2rem);
-  line-height: 1.3;
-  font-weight: 500;
+.ar-title {
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.ar-body {
+  font-size: clamp(1.15rem, 1.5vw, 1.4rem);
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.ar-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 /* ═══ Text reveal mask ═══ */
-.line-mask {
+.ar-mask {
   overflow: hidden;
-  display: block;
-}
-
-/* ═══ Noise texture overlay ═══ */
-.noise::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.03;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  z-index: 9999;
+  padding-left: 0.04em;
+  margin-left: -0.04em;
 }
 
 /* ═══ Section spacing ═══ */
-.section {
+.ar-section {
   position: relative;
-  padding: 6rem 0;
+  width: 100%;
+  padding: 5rem clamp(1.5rem, 5vw, 7rem);
 }
 
 @media (min-width: 768px) {
-  .section { padding: 10rem 0; }
+  .ar-section { padding: 7rem clamp(3rem, 5vw, 7rem); }
 }
 
-/* ═══ Divider line ═══ */
-.divider {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+@media (min-width: 1024px) {
+  .ar-section { padding: 8rem clamp(5rem, 6vw, 8rem); }
 }
 
-/* ═══ Smooth image reveal ═══ */
-.img-reveal {
-  overflow: hidden;
-  position: relative;
+@media (min-width: 1280px) {
+  .ar-section { padding: 9rem clamp(7rem, 8vw, 12rem); }
 }
 
-.img-reveal img {
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+/* ═══ Buttons ═══ */
+.ar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem 2rem;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.img-reveal:hover img {
-  transform: scale(1.05);
+.ar-btn:hover {
+  background: #5a48b5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(109, 90, 205, 0.25);
 }
 
-/* ═══ Accent link style ═══ */
-.link-accent {
+.ar-btn-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem 2rem;
+  background: var(--foreground);
+  color: var(--background);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ar-btn-dark:hover {
+  background: #222;
+  transform: translateY(-2px);
+}
+
+.ar-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  background: transparent;
+  color: var(--foreground);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 0.6rem;
+  border: 1.5px solid var(--border);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ar-btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ═══ Tag pills ═══ */
+.ar-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  color: var(--muted);
+  background: transparent;
+}
+
+/* ═══ Link hover underline ═══ */
+.ar-link {
   position: relative;
   display: inline-block;
 }
 
-.link-accent::after {
+.ar-link::after {
   content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
   width: 0;
   height: 1px;
-  background: var(--accent);
+  background: currentColor;
   transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.link-accent:hover::after {
+.ar-link:hover::after {
   width: 100%;
 }
 
 /* ═══ Scrollbar ═══ */
+::-webkit-scrollbar { width: 0px; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
-
-/* ═══ Sticker system (easter egg) ═══ */
-@keyframes stickerFloat {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-6px); }
-}
-.sticker-float {
-  animation: stickerFloat var(--dur, 5s) ease-in-out infinite;
-  animation-delay: var(--delay, 0s);
-}
-@keyframes wiggle {
-  0%   { transform: rotate(0deg); }
-  20%  { transform: rotate(8deg); }
-  40%  { transform: rotate(-6deg); }
-  60%  { transform: rotate(4deg); }
-  80%  { transform: rotate(-2deg); }
-  100% { transform: rotate(0deg); }
-}
-.sticker-wiggle { animation: wiggle 0.5s ease-in-out; }
-@keyframes bubblePop {
-  0%   { transform: scale(0.7) translateX(-50%); opacity: 0; }
-  100% { transform: scale(1) translateX(-50%); opacity: 1; }
-}

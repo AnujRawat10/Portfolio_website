@@ -5,7 +5,6 @@ import Projects from "./components/sections/Projects";
 import Services from "./components/sections/Services";
 import Process from "./components/sections/Process";
 import Testimonials from "./components/sections/Testimonials";
-import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
 
 export default function Home() {
@@ -13,12 +12,11 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <About />
-      <Projects />
       <Services />
-      <Process />
+      <Projects />
+      <About />
       <Testimonials />
-      <Contact />
+      <Process />
       <Footer />
     </main>
   );

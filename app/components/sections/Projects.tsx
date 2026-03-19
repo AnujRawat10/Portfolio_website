@@ -1,176 +1,81 @@
 "use client";
 
+import Image from "next/image";
 import ScrollReveal from "../ScrollReveal";
 import TextReveal from "../TextReveal";
-import ParallaxImage from "../ParallaxImage";
-import { ArrowUpRight } from "lucide-react";
 
-interface Project {
-  number: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  tech: string[];
-  images: string[];
-  color: string;
-  liveUrl?: string;
-}
-
-const projects: Project[] = [
+const projects = [
   {
-    number: "01",
     title: "Akbar Brass Products",
-    subtitle: "Luxury E-Commerce Platform",
-    description:
-      "A premium e-commerce experience for a heritage brass manufacturing house established in 1990. Features an admin dashboard, product catalog with 70+ SKUs, and cinematic scroll animations that bring the artisanship to life.",
-    tech: ["Next.js", "MongoDB", "GSAP", "Tailwind CSS", "Node.js"],
-    images: ["/projects/akbar/hero.webp", "/projects/akbar/product1.jpg", "/projects/akbar/showroom.webp"],
-    color: "#d4a853",
-    liveUrl: "#",
+    description: "Premium e-commerce platform for a heritage brass manufacturing house.",
+    tags: ["Design", "Development", "E-Commerce"],
+    image: "/projects/akbar/hero.webp",
+    year: "2025",
   },
   {
-    number: "02",
     title: "TrueBerry",
-    subtitle: "Organic Brand Showcase",
-    description:
-      "A vibrant, scroll-driven website for an organic berry brand. Built with Framer Motion for buttery-smooth page transitions, featuring product spotlights, farm-to-table storytelling, and a warm, inviting design language.",
-    tech: ["Next.js", "Framer Motion", "Tailwind CSS", "TypeScript"],
-    images: ["/projects/trueberry/hero.jpg", "/projects/trueberry/product1.jpg", "/projects/trueberry/product2.jpg"],
-    color: "#ED1C24",
+    description: "Vibrant, scroll-driven website for an organic berry brand.",
+    tags: ["Design", "Development", "Motion"],
+    image: "/projects/trueberry/hero.jpg",
+    year: "2025",
   },
   {
-    number: "03",
     title: "Phenomenal Spirits",
-    subtitle: "Premium Whiskey Showcase",
-    description:
-      "A dark, moody digital experience for a premium spirits portfolio. Featuring immersive product photography, GSAP-powered scroll animations, dual light/dark themes, and a sophisticated e-commerce flow worthy of the brand.",
-    tech: ["Next.js", "GSAP", "Radix UI", "Tailwind CSS", "TypeScript"],
-    images: ["/projects/phenomenal/hero.png", "/projects/phenomenal/banner.jpg"],
-    color: "#c77d3a",
+    description: "Dark, moody digital experience for a premium spirits portfolio.",
+    tags: ["Design", "Development", "Animation"],
+    image: "/projects/phenomenal/hero.png",
+    year: "2024",
   },
   {
-    number: "04",
     title: "Yunorra",
-    subtitle: "Fashion & Luxury Brand",
-    description:
-      "A minimal, editorial-style website for a luxury fashion label. Clean grid layouts, lookbook-style imagery, and refined typography create a premium digital presence that mirrors the brand's aesthetic.",
-    tech: ["React", "Vite", "TypeScript", "Tailwind CSS"],
-    images: ["/projects/yunorra/hero.jpg", "/projects/yunorra/lookbook.jpg", "/projects/yunorra/product1.jpg"],
-    color: "#e8dcc8",
+    description: "Minimal, editorial-style website for a luxury fashion label.",
+    tags: ["Design", "Development"],
+    image: "/projects/yunorra/hero.jpg",
+    year: "2024",
   },
 ];
 
-function ProjectCard({ project, index }: { project: Project; index: number }) {
-  const isEven = index % 2 === 0;
-
-  return (
-    <div className="py-16 md:py-24">
-      {/* Project number + title */}
-      <div className="mb-8 md:mb-12">
-        <ScrollReveal>
-          <span
-            className="font-mono text-7xl md:text-9xl font-bold opacity-10"
-            style={{ color: project.color }}
-          >
-            {project.number}
-          </span>
-        </ScrollReveal>
-        <TextReveal text={project.title} className="text-heading text-white -mt-6 md:-mt-10" />
-        <ScrollReveal delay={0.2}>
-          <p className="font-mono text-sm tracking-wider uppercase mt-2" style={{ color: project.color }}>
-            {project.subtitle}
-          </p>
-        </ScrollReveal>
-      </div>
-
-      {/* Images + Info */}
-      <div className={`grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-start ${isEven ? "" : "md:direction-rtl"}`}>
-        {/* Main image */}
-        <div className={`${isEven ? "md:col-span-7" : "md:col-span-7 md:col-start-6"}`}>
-          <ScrollReveal delay={0.1} direction={isEven ? "left" : "right"}>
-            <ParallaxImage
-              src={project.images[0]}
-              alt={project.title}
-              className="aspect-[16/10] rounded-xl"
-            />
-          </ScrollReveal>
-        </div>
-
-        {/* Info + secondary image */}
-        <div className={`${isEven ? "md:col-span-5" : "md:col-span-5 md:col-start-1 md:row-start-1"}`}>
-          <ScrollReveal delay={0.3}>
-            <p className="text-white/60 text-base md:text-lg leading-relaxed">
-              {project.description}
-            </p>
-          </ScrollReveal>
-
-          {/* Tech stack */}
-          <ScrollReveal delay={0.4}>
-            <div className="flex flex-wrap gap-2 mt-6">
-              {project.tech.map((t) => (
-                <span
-                  key={t}
-                  className="font-mono text-xs px-3 py-1.5 rounded-full border border-white/10 text-white/50"
-                >
-                  {t}
-                </span>
-              ))}
-            </div>
-          </ScrollReveal>
-
-          {/* Secondary image */}
-          {project.images[1] && (
-            <ScrollReveal delay={0.5}>
-              <ParallaxImage
-                src={project.images[1]}
-                alt={`${project.title} detail`}
-                className="aspect-[4/3] rounded-xl mt-6"
-                speed={0.1}
-              />
-            </ScrollReveal>
-          )}
-
-          {/* CTA */}
-          {project.liveUrl && (
-            <ScrollReveal delay={0.6}>
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-6 text-sm font-mono tracking-wider uppercase text-white/60 hover:text-accent transition-colors group"
-              >
-                View Project
-                <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </a>
-            </ScrollReveal>
-          )}
-        </div>
-      </div>
-
-      {/* Divider */}
-      <div className="divider mt-16 md:mt-24" />
-    </div>
-  );
-}
-
 export default function Projects() {
   return (
-    <section id="work" className="section">
-      <div className="mx-auto max-w-7xl px-6">
-        <ScrollReveal>
-          <p className="font-mono text-xs text-accent tracking-[0.3em] uppercase mb-6">
-            Selected Work
+    <section id="work" className="ar-section border-t border-border">
+      <ScrollReveal>
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-16 md:mb-20">
+          <h2 className="ar-headline font-display text-foreground">
+            Selected work
+          </h2>
+          <p className="text-[1rem] text-muted max-w-sm md:text-right">
+            Each project built from scratch with custom design and clean code.
           </p>
-        </ScrollReveal>
-        <TextReveal text="Projects I've crafted" className="text-heading text-white mb-4" />
-        <ScrollReveal delay={0.2}>
-          <p className="text-white/40 text-lg max-w-2xl mb-8">
-            Each project is a unique blend of strategy, design, and engineering — built to perform and built to impress.
-          </p>
-        </ScrollReveal>
+        </div>
+      </ScrollReveal>
 
-        {projects.map((p, i) => (
-          <ProjectCard key={p.number} project={p} index={i} />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 md:gap-x-10 md:gap-y-20">
+        {projects.map((project, i) => (
+          <ScrollReveal key={project.title} delay={i % 2 === 1 ? 0.1 : 0}>
+            <article className="group">
+              <div className="relative w-full aspect-[16/10] overflow-hidden rounded-lg bg-card">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className="mt-5">
+                <div className="flex items-center gap-3 mb-1.5">
+                  <h3 className="text-lg font-display font-semibold text-foreground">{project.title}</h3>
+                  <span className="font-mono text-xs text-muted">{project.year}</span>
+                </div>
+                <p className="text-[0.95rem] text-muted leading-relaxed mb-3">{project.description}</p>
+                <div className="flex gap-2 flex-wrap">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="ar-tag">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </article>
+          </ScrollReveal>
         ))}
       </div>
     </section>

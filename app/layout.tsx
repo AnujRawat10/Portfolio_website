@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto_Mono, Manrope } from "next/font/google";
+import { Roboto_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import LenisProvider from "./components/LenisProvider";
 
@@ -9,9 +9,9 @@ const robotoMono = Roboto_Mono({
   display: "swap",
 });
 
-const manrope = Manrope({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-manrope",
+  variable: "--font-inter",
   display: "swap",
   weight: ["400", "500", "600", "700", "800"],
 });
@@ -38,7 +38,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${robotoMono.variable} ${manrope.variable} antialiased noise`}>
+      <body className={`${robotoMono.variable} ${inter.variable} antialiased`}>
         <LenisProvider>{children}</LenisProvider>
       </body>
     </html>

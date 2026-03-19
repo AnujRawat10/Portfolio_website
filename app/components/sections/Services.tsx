@@ -1,72 +1,98 @@
 "use client";
 
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import ScrollReveal from "../ScrollReveal";
 import TextReveal from "../TextReveal";
-import { Code2, Palette, ShoppingBag, Sparkles, Monitor, Cpu } from "lucide-react";
 
-const services = [
-  {
-    icon: Code2,
-    title: "Web Development",
-    description: "Full-stack web applications built with Next.js, React, and Node.js. Fast, scalable, and SEO-optimized.",
-  },
-  {
-    icon: Palette,
-    title: "UI/UX Design",
-    description: "User-centered design with a focus on conversion. Clean interfaces that delight users and drive results.",
-  },
-  {
-    icon: ShoppingBag,
-    title: "E-Commerce",
-    description: "Custom e-commerce solutions with product catalogs, admin dashboards, and seamless checkout flows.",
-  },
-  {
-    icon: Sparkles,
-    title: "Creative Development",
-    description: "Scroll-triggered animations, parallax effects, and interactive experiences that set your brand apart.",
-  },
-  {
-    icon: Monitor,
-    title: "Responsive Design",
-    description: "Pixel-perfect layouts that look stunning on every device — from mobile to ultra-wide displays.",
-  },
-  {
-    icon: Cpu,
-    title: "Performance",
-    description: "Optimized for Core Web Vitals. Fast load times, clean code, and efficient architecture.",
-  },
+const designServices = [
+  "Art direction",
+  "UX/UI Design",
+  "Motion Design",
+  "Design System",
+  "Content strategy",
+  "Usability testing",
 ];
 
-export default function Services() {
-  return (
-    <section id="services" className="section">
-      <div className="mx-auto max-w-7xl px-6">
-        <ScrollReveal>
-          <p className="font-mono text-xs text-accent tracking-[0.3em] uppercase mb-6">
-            Services
-          </p>
-        </ScrollReveal>
-        <TextReveal text="What I do" className="text-heading text-white mb-16" />
+const devServices = [
+  "Front-end/back-end development",
+  "Custom Next.js website",
+  "Custom Shopify E-Commerce",
+  "Creative web development",
+  "Scroll animations & interactions",
+  "SEO",
+];
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5 rounded-2xl overflow-hidden">
-          {services.map((s, i) => (
-            <ScrollReveal key={s.title} delay={i * 0.08}>
-              <div className="bg-[#0a0a0a] p-8 md:p-10 group hover:bg-white/[0.02] transition-colors duration-500 h-full">
-                <s.icon
-                  size={28}
-                  className="text-accent mb-5 group-hover:scale-110 transition-transform duration-300"
-                  strokeWidth={1.5}
-                />
-                <h3 className="text-lg font-display font-semibold text-white mb-3">
-                  {s.title}
-                </h3>
-                <p className="text-sm text-white/40 leading-relaxed">
-                  {s.description}
-                </p>
+const marqueeItems = ["No logo", "No print", "No social media", "No branding"];
+const allMarquee = [...marqueeItems, ...marqueeItems, ...marqueeItems, ...marqueeItems];
+
+export default function Services() {
+  const marqueeRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: marqueeRef,
+    offset: ["start end", "end start"],
+  });
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-40%"]);
+
+  return (
+    <section id="services" className="border-t border-border">
+      <div className="ar-section">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 lg:gap-32">
+          {/* Design */}
+          <ScrollReveal>
+            <div>
+              <h2
+                className="font-display font-bold text-foreground"
+                style={{ fontSize: "clamp(2.5rem, 5vw, 5rem)" }}
+              >
+                Design
+              </h2>
+              <div className="border-t border-foreground/15 mt-4">
+                {designServices.map((s) => (
+                  <div key={s} className="py-4 md:py-5 border-b border-foreground/10">
+                    <span className="text-[1.05rem] md:text-[1.15rem] text-foreground">{s}</span>
+                  </div>
+                ))}
               </div>
-            </ScrollReveal>
-          ))}
+            </div>
+          </ScrollReveal>
+
+          {/* Development */}
+          <ScrollReveal delay={0.15}>
+            <div>
+              <h2
+                className="font-display font-bold text-foreground"
+                style={{ fontSize: "clamp(2.5rem, 5vw, 5rem)" }}
+              >
+                Development
+              </h2>
+              <div className="border-t border-foreground/15 mt-4">
+                {devServices.map((s) => (
+                  <div key={s} className="py-4 md:py-5 border-b border-foreground/10">
+                    <span className="text-[1.05rem] md:text-[1.15rem] text-foreground">{s}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
+      </div>
+
+      {/* Marquee */}
+      <div ref={marqueeRef} className="overflow-hidden bg-accent/10 py-10 md:py-14">
+        <motion.div style={{ x }} className="flex items-center gap-8 whitespace-nowrap">
+          {allMarquee.map((item, i) => (
+            <span key={i} className="flex items-center gap-8">
+              <span className="w-3 h-3 rounded-sm bg-accent/50 flex-shrink-0" />
+              <span
+                className="font-display font-bold text-foreground select-none"
+                style={{ fontSize: "clamp(3rem, 8vw, 8rem)", lineHeight: 1, letterSpacing: "-0.03em" }}
+              >
+                {item}
+              </span>
+            </span>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
